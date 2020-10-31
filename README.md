@@ -7,7 +7,7 @@
 ![npm](https://img.shields.io/npm/dt/cdk-wordpress?label=npm&color=orange)
 ![PyPI](https://img.shields.io/pypi/dm/cdk-wordpress?label=pypi&color=blue)
 
-A CDK automatically deploy WordPress
+A CDK construct library to deploy WordPress
 
 ## How do use
 
