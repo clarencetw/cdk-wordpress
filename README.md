@@ -20,9 +20,9 @@ yarn add cdk-wordpress
 ### TypeScript Sample
 
 ```ts
-import { Ecs } from "cdk-wordpress";
+import { WordPress } from "cdk-wordpress";
 
-const wordpress = new Ecs(stack, "WordPressEcs");
+const wordpress = new WordPress(stack, "WordPressEcs");
 
 // Get WordPress endpoint
 new CfnOutput(stack, "Endpoint", { value: wordpress.endpoint });

@@ -1,5 +1,5 @@
 import * as cdk from '@aws-cdk/core';
-import { Ecs } from './index';
+import { WordPress } from './index';
 
 export class IntegTesting {
   readonly stack: cdk.Stack[];
@@ -14,7 +14,7 @@ export class IntegTesting {
 
     const stack = new cdk.Stack(app, 'testing-stack', { env });
 
-    const wordpress = new Ecs(stack, 'WordPressEcs');
+    const wordpress = new WordPress(stack, 'WordPressEcs');
 
     new cdk.CfnOutput(stack, 'Endpoint', {
       value: wordpress.endpoint,

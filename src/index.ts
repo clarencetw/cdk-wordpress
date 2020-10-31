@@ -5,22 +5,42 @@ import * as efs from '@aws-cdk/aws-efs';
 import * as rds from '@aws-cdk/aws-rds';
 import * as cdk from '@aws-cdk/core';
 
+/**
+ * The interface for all wordpress.
+ */
 export interface WordPressProps {
   /**
    * The WordPress VPC
    */
   readonly vpc?: ec2.IVpc;
+
   /**
    * The WordPress RDS
    */
   readonly rdsInstance?: rds.DatabaseInstance;
+
   /**
    * The WordPress cluster
    */
   readonly cluster?: ecs.Cluster;
+
+  /**
+   * The WordPress Platform
+   */
+  readonly platform?: Platform;
 }
 
-export class Ecs extends cdk.Construct {
+/**
+ * The platform.
+ */
+export enum Platform {
+  /**
+   * The WordPress use ECS Cluster base on EC2
+   */
+  ECS_EC2 = 'ecs_ec2',
+}
+
+export class WordPress extends cdk.Construct {
   readonly endpoint: string;
   constructor(scope: cdk.Construct, id: string, props: WordPressProps = {}) {
     super(scope, id);
