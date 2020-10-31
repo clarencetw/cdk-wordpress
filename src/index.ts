@@ -23,21 +23,6 @@ export interface WordPressProps {
    * The WordPress cluster
    */
   readonly cluster?: ecs.Cluster;
-
-  /**
-   * The WordPress Platform
-   */
-  readonly platform?: Platform;
-}
-
-/**
- * The platform.
- */
-export enum Platform {
-  /**
-   * The WordPress use ECS Cluster base on EC2
-   */
-  ECS_EC2 = 'ecs_ec2',
 }
 
 export class WordPress extends cdk.Construct {
