@@ -4,18 +4,18 @@
 
 Name|Description
 ----|-----------
-[Ecs](#cdk-wordpress-ecs)|*No description*
+[WordPress](#cdk-wordpress-wordpress)|*No description*
 
 
 **Structs**
 
 Name|Description
 ----|-----------
-[WordPressProps](#cdk-wordpress-wordpressprops)|*No description*
+[WordPressProps](#cdk-wordpress-wordpressprops)|The interface for all wordpress.
 
 
 
-## class Ecs  <a id="cdk-wordpress-ecs"></a>
+## class WordPress  <a id="cdk-wordpress-wordpress"></a>
 
 
 
@@ -28,7 +28,7 @@ __Extends__: [Construct](#aws-cdk-core-construct)
 
 
 ```ts
-new Ecs(scope: Construct, id: string, props?: WordPressProps)
+new WordPress(scope: Construct, id: string, props?: WordPressProps)
 ```
 
 * **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
@@ -52,7 +52,7 @@ Name | Type | Description
 ## struct WordPressProps  <a id="cdk-wordpress-wordpressprops"></a>
 
 
-
+The interface for all wordpress.
 
 
 
