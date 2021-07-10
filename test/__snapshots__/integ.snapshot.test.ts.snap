@@ -62,7 +62,7 @@ Object {
         },
         "DeleteAutomatedBackups": true,
         "Engine": "mysql",
-        "EngineVersion": "8.0.21",
+        "EngineVersion": "8.0.25",
         "MasterUserPassword": Object {
           "Fn::Join": Array [
             "",
