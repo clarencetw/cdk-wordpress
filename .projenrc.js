@@ -1,4 +1,6 @@
-const { AwsCdkConstructLibrary } = require('projen');
+const { AwsCdkConstructLibrary, DependenciesUpgradeMechanism } = require('projen');
+
+const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
 
 const project = new AwsCdkConstructLibrary({
   authorAddress: 'mr.lin.clarence@gmail.com',
@@ -8,7 +10,16 @@ const project = new AwsCdkConstructLibrary({
   repository: 'https://github.com/clarencetw/cdk-wordpress.git',
   keywords: ['aws', 'cdk', 'wordpress'],
   defaultReleaseBranch: 'master',
-  dependabot: false,
+  depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+    workflowOptions: {
+      labels: ['auto-approve', 'auto-merge'],
+      secret: AUTOMATION_TOKEN,
+    },
+  }),
+  autoApproveOptions: {
+    secret: 'GITHUB_TOKEN',
+    allowedUsernames: ['clarencetw'],
+  },
   catalog: {
     twitter: 'Clarence_Lin',
     announce: false,
