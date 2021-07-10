@@ -34,7 +34,7 @@ export class WordPress extends cdk.Construct {
 
     const rdsInstance = props.rdsInstance ?? new rds.DatabaseInstance(this, 'Database', {
       engine: rds.DatabaseInstanceEngine.mysql({
-        version: rds.MysqlEngineVersion.VER_8_0_21,
+        version: rds.MysqlEngineVersion.VER_8_0_25,
       }),
       vpc,
       deleteAutomatedBackups: true,
