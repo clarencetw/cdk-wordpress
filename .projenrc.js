@@ -7,6 +7,7 @@ const project = new AwsCdkConstructLibrary({
   name: "cdk-wordpress",
   repository: "https://github.com/clarencetw/cdk-wordpress.git",
   keywords: ['aws', 'cdk', 'wordpress'],
+  defaultReleaseBranch: 'master',
   dependabot: false,
   catalog: {
     twitter: 'Clarence_Lin',
