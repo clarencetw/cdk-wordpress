@@ -16,15 +16,7 @@ const project = new AwsCdkConstructLibrary({
     distName: 'cdk-wordpress',
     module: 'cdk_wordpress',
   },
-  deps: [
-    "@aws-cdk/core",
-    "@aws-cdk/aws-ec2",
-    "@aws-cdk/aws-rds",
-    "@aws-cdk/aws-ecs",
-    "@aws-cdk/aws-ecs-patterns",
-    "@aws-cdk/aws-efs"
-  ],
-  peerDeps: [
+  cdkDependencies: [
     "@aws-cdk/core",
     "@aws-cdk/aws-ec2",
     "@aws-cdk/aws-rds",
@@ -34,7 +26,7 @@ const project = new AwsCdkConstructLibrary({
   ]
 });
 
-const common_exclude = ['cdk.out', 'cdk.context.json', 'images', 'yarn-error.log'];
+const common_exclude = ['cdk.out', 'cdk.context.json', 'yarn-error.log'];
 project.npmignore.exclude(...common_exclude);
 project.gitignore.exclude(...common_exclude);
 
