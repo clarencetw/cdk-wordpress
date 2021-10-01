@@ -10,6 +10,7 @@ const project = new AwsCdkConstructLibrary({
   repository: 'https://github.com/clarencetw/cdk-wordpress.git',
   keywords: ['aws', 'cdk', 'wordpress'],
   defaultReleaseBranch: 'master',
+  minNodeVersion: '14.17.6',
   depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
