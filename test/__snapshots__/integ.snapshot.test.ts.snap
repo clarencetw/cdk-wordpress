@@ -983,6 +983,12 @@ echo ECS_AWSVPC_BLOCK_IMDS=true >> /etc/ecs/ecs.config",
         "HealthCheckPath": "/wp-includes/images/blank.gif",
         "Port": 80,
         "Protocol": "HTTP",
+        "TargetGroupAttributes": Array [
+          Object {
+            "Key": "stickiness.enabled",
+            "Value": "false",
+          },
+        ],
         "TargetType": "instance",
         "VpcId": Object {
           "Ref": "WordPressEcsVpc532EC8A6",
