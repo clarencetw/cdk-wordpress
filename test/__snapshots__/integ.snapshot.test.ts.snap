@@ -101,6 +101,7 @@ Object {
       "UpdateReplacePolicy": "Snapshot",
     },
     "WordPressEcsDatabaseSecret86C748B7": Object {
+      "DeletionPolicy": "Delete",
       "Properties": Object {
         "Description": Object {
           "Fn::Join": Array [
@@ -121,6 +122,7 @@ Object {
         },
       },
       "Type": "AWS::SecretsManager::Secret",
+      "UpdateReplacePolicy": "Delete",
     },
     "WordPressEcsDatabaseSecretAttachment89768602": Object {
       "Properties": Object {
