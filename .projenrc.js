@@ -1,8 +1,8 @@
-const { AwsCdkConstructLibrary, DependenciesUpgradeMechanism } = require('projen');
+const { awscdk, Gitpod } = require('projen');
 
 const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
 
-const project = new AwsCdkConstructLibrary({
+const project = new awscdk.AwsCdkConstructLibrary({
   authorAddress: 'mr.lin.clarence@gmail.com',
   authorName: 'Clarence Lin',
   cdkVersion: '1.71.0',
@@ -11,12 +11,12 @@ const project = new AwsCdkConstructLibrary({
   keywords: ['aws', 'cdk', 'wordpress'],
   defaultReleaseBranch: 'master',
   minNodeVersion: '14.17.6',
-  depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+  depsUpgrade: {
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
       secret: AUTOMATION_TOKEN,
     },
-  }),
+  },
   autoApproveOptions: {
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['clarencetw'],
@@ -37,6 +37,12 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-ecs-patterns',
     '@aws-cdk/aws-efs',
   ],
+});
+
+const gitpod = new Gitpod(project);
+gitpod.addCustomTask({
+  init: 'yarn install && yarn run build',
+  command: 'npx projen upgrade',
 });
 
 const common_exclude = ['cdk.out', 'cdk.context.json', 'yarn-error.log'];
