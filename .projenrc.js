@@ -11,16 +11,11 @@ const project = new awscdk.AwsCdkConstructLibrary({
   keywords: ['aws', 'cdk', 'wordpress'],
   defaultReleaseBranch: 'master',
   minNodeVersion: '14.17.6',
-  depsUpgrade: {
-    workflowOptions: {
-      labels: ['auto-approve', 'auto-merge'],
-      secret: AUTOMATION_TOKEN,
-    },
-  },
   autoApproveOptions: {
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['clarencetw'],
   },
+  autoApproveUpgrades: true,
   catalog: {
     twitter: 'Clarence_Lin',
     announce: false,
