@@ -1201,8 +1201,8 @@ echo ECS_AWSVPC_BLOCK_IMDS=true >> /etc/ecs/ecs.config",
         },
         "Volumes": Array [
           Object {
-            "EfsVolumeConfiguration": Object {
-              "FileSystemId": Object {
+            "EFSVolumeConfiguration": Object {
+              "FilesystemId": Object {
                 "Ref": "WordPressEcsFileSystem0FE21389",
               },
             },
