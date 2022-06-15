@@ -316,7 +316,7 @@ def pick(dct, *keys):
             "Arn",
           ],
         },
-        "Runtime": "python3.6",
+        "Runtime": "python3.9",
         "Tags": Array [
           Object {
             "Key": "Name",
