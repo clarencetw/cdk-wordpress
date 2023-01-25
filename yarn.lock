@@ -2446,9 +2446,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^3.3.69:
-  version "3.4.224"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.4.224.tgz#3654fb1cd3d711eaf4ca056563369e1b12d77454"
-  integrity sha512-cwmg2cOXAmRlO5Iv+VBeD5zVFwVgmZM6S21IHyw3gqmYw/sjI7sIU/f0dYXH5MnELty5uKUCn2gjcnSbCHNxRg==
+  version "3.4.225"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.4.225.tgz#f3b90f9e7381c371da6eab9f5a3ca11ca7b1cac1"
+  integrity sha512-ln3RCM2uAG5bY5whD8R6ITOoTk/OFQ76HU8VKhmbDTO2uNtTm50qoQZOCTskA3JgzJxL1PIxjYmgj7Cwnb6w+w==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
