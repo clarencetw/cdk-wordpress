@@ -10,7 +10,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
   repository: 'https://github.com/clarencetw/cdk-wordpress.git',
   keywords: ['aws', 'cdk', 'wordpress'],
   defaultReleaseBranch: 'master',
-  minNodeVersion: '14.17.6',
   autoApproveOptions: {
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['clarencetw'],
